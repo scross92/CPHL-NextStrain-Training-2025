@@ -24,3 +24,8 @@ Training: This folder contains the videos and slides for completing the Nextstra
 Lectures: The lecture slides that are presented in both the asynchronous and the in-person training will be stored here
 
 Exercises: Materials for the mock case studies will be provided here
+
+### Understanding the Command Line Interface (CLI)
+This training will extensively make use of the command line interface. We recognize that there is a variety of expertise and familiarity with the CLI. Therefore, if you are unfamiliar or need a refresher, please complete this well put together tutorial on navigating and understanding the Unix shell. https://swcarpentry.github.io/shell-novice/ 
+
+_We will not have adequate time to do a in depth training in person on navigating and understanding the Unix shell, therefore it is essential to complete this if you do no regularly use the Unix shell in your work!!!_
