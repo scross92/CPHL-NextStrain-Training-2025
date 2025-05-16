@@ -17,3 +17,6 @@ https://drive.google.com/file/d/1IE7frcC3p6nN_I4I_GT5Ltq6JzNWB33m/view?usp=drive
 
 ### Remote Lecture 2: Running a Nextstrain build step-by-step with Zika virus tutorial dataset
 https://drive.google.com/file/d/1WkVLVfK4eliq4-9BdGY575raLw838M_h/view?usp=drive_link
+
+### Remote Lecture 3: Nextclade
+https://drive.google.com/file/d/1uUv4ClY6jpDp_lnWH_vDREhLO3sJ1qvQ/view?usp=drive_link
