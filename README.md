@@ -27,6 +27,7 @@ Materials can be accessed through the appropriate folders:
 
 ### Understanding the Command Line Interface (CLI)
 This training will extensively make use of the command line interface. We recognize that there is a variety of expertise and familiarity with the CLI. Therefore, if you are unfamiliar or need a refresher, please complete this well put together tutorial on navigating and understanding the Unix shell. https://swcarpentry.github.io/shell-novice/ 
+_We will not have adequate time to do a in depth training in person on navigating and understanding the Unix shell, therefore it is **essential** to complete this if you do no regularly use the Unix shell in your work!!!_
 
 # TO DO PRIOR TO IN PERSON TRAINING!!!
 We will be navigating various databases and using GUI bioinformatic tools (i.e. Geneious Prime). Please complete the following as soon as possible. This is especially true for the database access request as these can take several days to go through.
@@ -37,4 +38,4 @@ We will be navigating various databases and using GUI bioinformatic tools (i.e. 
 (Select the "New User? Register" button at the bottom under ORCID Login) 
 4) Request an NCBI user account here: https://www.ncbi.nlm.nih.gov/account/
 
-_We will not have adequate time to do a in depth training in person on navigating and understanding the Unix shell, therefore it is **essential** to complete this if you do no regularly use the Unix shell in your work!!!_
+
