@@ -30,7 +30,7 @@ This training will extensively make use of the command line interface. We recogn
 _We will not have adequate time to do a in depth training in person on navigating and understanding the Unix shell, therefore it is **essential** to complete this if you do no regularly use the Unix shell in your work!!!_
 
 # TO DO PRIOR TO IN PERSON TRAINING!!!
-We will be navigating various databases and using GUI bioinformatic tools (i.e. Geneious Prime). Please complete the following as soon as possible. This is especially true for the database access request as these can take several days to go through.
+We will be navigating various databases and using GUI bioinformatic tools (i.e. Geneious Prime). **Please complete the following as soon as possible.** This is especially true for the database access request as these can take several days to go through.
 1) Download Geneious Prime here: https://www.geneious.com/updates/geneious-prime-2024-0
 **_NOTE_**: Please **do not** activate the free 30 day trial yet. We will activate that together.
 2) Request access to GISAID here: https://gisaid.org/register/
