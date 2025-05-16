@@ -31,11 +31,9 @@ This training will extensively make use of the command line interface. We recogn
 # TO DO PRIOR TO IN PERSON TRAINING!!!
 We will be navigating various databases and using GUI bioinformatic tools (i.e. Geneious Prime). Please complete the following as soon as possible. This is especially true for the database access request as these can take several days to go through.
 1) Download Geneious Prime here: https://www.geneious.com/updates/geneious-prime-2024-0
-
 **_NOTE_**: Please **do not** activate the free 30 day trial yet. We will activate that together.
 2) Request access to GISAID here: https://gisaid.org/register/
 3) Request access to Pathoplexus here: https://authentication.pathoplexus.org/realms/loculus/protocol/openid-connect/auth?client_id=backend-client&scope=openid&response_type=code&redirect_uri=https%3A%2F%2Fpathoplexus.org%2F
-
 (Select the "New User? Register" button at the bottom under ORCID Login) 
 4) Request an NCBI user account here: https://www.ncbi.nlm.nih.gov/account/
 
