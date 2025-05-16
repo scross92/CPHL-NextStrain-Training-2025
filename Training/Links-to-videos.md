@@ -6,7 +6,7 @@ Just as a reminder, if you are not familiar with the command-line interface (CLI
 https://swcarpentry.github.io/shell-novice/
 
 
-For the remote portion of this training, we are only covering the first few available tutorials to:
+For the remote portion of this training, we are only covering select tutorials to:
 1) Make sure that your system is set up to properly run Nextstrain
 2) Understand the steps behind running a Nextstrain build
 3) Identify useful web-based tools for small data queries
