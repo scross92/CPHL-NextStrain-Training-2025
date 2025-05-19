@@ -13,4 +13,7 @@ https://drive.google.com/file/d/1fwzaGVEbgRnxg77XDhAk8C81X-e2XvF7/view?usp=drive
 ### Lecture 3:
 https://drive.google.com/file/d/1ukxqd97PJNmj2wNx86TcvlO7dEZwftmT/view?usp=drive_link
 
+### Lecture 4:
+https://drive.google.com/file/d/1x3s-f8lzZ4lkDQBSWgYfED0UBSCfnk95/view?usp=drive_link
+
 _More lectures are coming soon, please revisit as materials are uploaded_
