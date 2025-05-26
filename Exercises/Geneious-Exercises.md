@@ -49,12 +49,14 @@ Now we have aligned our reads to multiple reference genomes and have identified 
 - Did the reference genome chosen impact the outcome of the consensus sequences? Is this always the case? 
 
 5. Now let's compare the consensus sequences to the WNV reference genome NC_009942. Perform another **mafft** alignment with just one of the consensus sequences (let's choose the MH170227 consensus sequence) and NC_009942. Let's answer some questions now on this:
+
 :question: **Questions to consider when viewing the mafft MH170227 alignment of consensus sequence with NC_009942:**
 -What is the pairwise identity?
 -How can you easily identify which spots across the genomes that differ?
 
 7. Let's give this a little bit more diversity in here. Go ahead and download NC_001563 from the NCBI Nucleotide interface. Similar as before, this likely will only download a portion. Select NC_001563 and click the "Download" button in the Document Viewer section.
 8. Now let's do a **mafft** alignment with MH170227 consensus sequence, NC_009942, and NC_001563. Let's answer some questions:
+
 :question: **Questions to consider when viewing the mafft alignment with NC_001563 added:**
 -What is the *overall* pairwise identity now?
 -What is the pairwise identity at nucleotide position 630?
