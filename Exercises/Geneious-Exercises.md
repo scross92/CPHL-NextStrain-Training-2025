@@ -27,9 +27,7 @@ We have performed some prior sequencing to West Nile virus (WNV) in contrived mo
 Actually, turns out we could have chosen a better reference genome because we know exactly which WNV strain was used in this experiment. Let's go ahead and repeat these steps using a strain specific reference genome.
 
 7. Let's find the new reference genome using the NCBI->Nucleotide interface (search for MH170227). Once downloaded, drag from the NCBI folder and into the "Mapping Exercise" folder.
-
 8. Now let's map the reads to the new reference. Again, let's stick with default Geneious settings.
-
 9. Let's take a look again at the new alignment and answer some questions.
 
 :question: **Questions to consider when viewing the _NEW_ alignment:**
