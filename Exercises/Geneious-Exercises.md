@@ -44,13 +44,16 @@ Now we have aligned our reads to multiple reference genomes and have identified 
 2. Go ahead and make a new folder for the alignment exercise. Under the same parent directory/folder "Geneious Exercises", make a new subfolder called "Geneious Alignment". Move the consensus sequences generated in the previous step to this folder. At the same, _copy_ the two reference genomes we used for the mapping exercise. By the end of this step, if done correctly your "Geneious Alignment" folder should have 2 consensus sequences and 2 reference genomes. The "Geneious Mapping" folder should still have the 2 reference genomes, but will not have the consensus sequences.
 3. Make sure you are in the "Geneious Alignment" folder. We will do a **mafft** alignment with just the two consensus sequences. We can use default settings. Hint: Look at the Toolbar and identify the the Align/Assemble toolkits.
 4. Examine the mafft alignment and answer the following questions:
+
 :question: **Questions to consider when viewing the mafft alignment of consensus sequences:**
+
 - What is the pairwise identity? What does this percentage mean?
 - Did the reference genome chosen impact the outcome of the consensus sequences? Is this always the case? 
 
 5. Now let's compare the consensus sequences to the WNV reference genome NC_009942. Perform another **mafft** alignment with just one of the consensus sequences (let's choose the MH170227 consensus sequence) and NC_009942. Let's answer some questions now on this:
 
 :question: **Questions to consider when viewing the mafft MH170227 alignment of consensus sequence with NC_009942:**
+
 -What is the pairwise identity?
 -How can you easily identify which spots across the genomes that differ?
 
@@ -58,6 +61,7 @@ Now we have aligned our reads to multiple reference genomes and have identified 
 8. Now let's do a **mafft** alignment with MH170227 consensus sequence, NC_009942, and NC_001563. Let's answer some questions:
 
 :question: **Questions to consider when viewing the mafft alignment with NC_001563 added:**
+
 -What is the *overall* pairwise identity now?
 -What is the pairwise identity at nucleotide position 630?
 -What is the pairwise identity from position 1,427 through 1,438? What is something that you notice about this section of nucleotides for NC_001563?
