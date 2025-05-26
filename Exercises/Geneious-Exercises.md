@@ -11,6 +11,7 @@ We have performed some prior sequencing to West Nile virus (WNV) in contrived mo
 5. Now let's map the reads to the reference. We can just use the Geneious aligner with default settings. Make sure you choose the appropriate file for the reference genome! Hint: Look at the Toolbar and identify the the Align/Assemble toolkits.
 6. It should take a couple minutes to run, but then it will spit out both a report and the alignment file. Let's dig in and answer some questions.
 
+
 :question: **Questions to consider when viewing the alignment:**
 - What is the average coverage depth across the WNV genome?
 - What is the total coverage across the WNV reference genome?
@@ -24,8 +25,11 @@ We have performed some prior sequencing to West Nile virus (WNV) in contrived mo
 - Can you identify mapped read pairs?
 
 Actually, turns out we could have chosen a better reference genome because we know exactly which WNV strain was used in this experiment. Let's go ahead and repeat these steps using a strain specific reference genome.
+
 7. Let's find the new reference genome using the NCBI->Nucleotide interface (search for MH170227). Once downloaded, drag from the NCBI folder and into the "Mapping Exercise" folder.
+
 8. Now let's map the reads to the new reference. Again, let's stick with default Geneious settings.
+
 9. Let's take a look again at the new alignment and answer some questions.
 
 :question: **Questions to consider when viewing the _NEW_ alignment:**
