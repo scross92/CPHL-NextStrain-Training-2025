@@ -33,4 +33,4 @@ Actually, turns out we could have chosen a better reference genome because we kn
 - What is the total coverage across the WNV reference genome?
 - Do you see any variants this time in the consensus sequence? Does this make sense?
 - How does this new mapping emphasize the importance of picking an appropriate reference genome?
-- How many reads **did not** map to WNV? What do you think these reads could align to?
+- How many reads **did not** map to WNV? What do you think these reads could align to? Hint: Go back to the beginning of this section and look at what we were sequencing.
