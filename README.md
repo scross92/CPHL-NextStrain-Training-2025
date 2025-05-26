@@ -23,7 +23,7 @@ Materials can be accessed through the appropriate folders:
 
 **Lectures**: The lecture slides that are presented in both the asynchronous and the in-person training will be stored here
 
-**Exercises**: Materials for the mock case studies will be provided here
+**Exercises**: Materials for the in-person exercises and mock case studies will be provided here
 
 ### Understanding the Command Line Interface (CLI)
 This training will extensively make use of the command line interface. We recognize that there is a variety of expertise and familiarity with the CLI. Therefore, if you are unfamiliar or need a refresher, please complete this well put together tutorial on navigating and understanding the Unix shell. https://swcarpentry.github.io/shell-novice/ 
