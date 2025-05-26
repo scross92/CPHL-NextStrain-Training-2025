@@ -54,18 +54,18 @@ Now we have aligned our reads to multiple reference genomes and have identified 
 
 :question: **Questions to consider when viewing the mafft MH170227 alignment of consensus sequence with NC_009942:**
 
--What is the pairwise identity?
--How can you easily identify which spots across the genomes that differ?
+- What is the pairwise identity?
+- How can you easily identify which spots across the genomes that differ?
 
 7. Let's give this a little bit more diversity in here. Go ahead and download NC_001563 from the NCBI Nucleotide interface. Similar as before, this likely will only download a portion. Select NC_001563 and click the "Download" button in the Document Viewer section.
 8. Now let's do a **mafft** alignment with MH170227 consensus sequence, NC_009942, and NC_001563. Let's answer some questions:
 
 :question: **Questions to consider when viewing the mafft alignment with NC_001563 added:**
 
--What is the *overall* pairwise identity now?
--What is the pairwise identity at nucleotide position 630?
--What is the pairwise identity from position 1,427 through 1,438? What is something that you notice about this section of nucleotides for NC_001563?
--In the Document Viewer window, there are the different tabs. One of them is labeled "Distances". This shows a chart that shows the pairwise identity between each sequence. What is the *overall* pairwise identity from our generated consensus sequence and NC_001563?
+- What is the *overall* pairwise identity now?
+- What is the pairwise identity at nucleotide position 630?
+- What is the pairwise identity from position 1,427 through 1,438? What is something that you notice about this section of nucleotides for NC_001563?
+- In the Document Viewer window, there are the different tabs. One of them is labeled "Distances". This shows a chart that shows the pairwise identity between each sequence. What is the *overall* pairwise identity from our generated consensus sequence and NC_001563?
 
 10. Ok, so adding in that sequence added quite a bit of variation. Let's try to decipher *why* there was such a change. Let's examine metadata for NC_009942 and NC_001563. What is something major that appears to stick out that likely explains this large variation?
 
