@@ -4,6 +4,55 @@ Now that we have explored each database, we are going to access data from each o
 
 ## NCBI
 
+A really nice feature of NCBI is the fact that unlike GISAID and Pathoplexus, which are focused more on viral pathogens, NCBI has data for ALL organisms. Let's practice navigating NCBI.
+
+1. Go to the NCBI homepage: https://www.ncbi.nlm.nih.gov/
+2. Navigate to the Taxonomy portal and enter the Taxonomy database.
+3. Let's find the taxonomy page for Mycobacterium tuberculosis. Hint: Remember you need to use the scientific name here. As a test, just try searching tuberculosis and see what happens when you do not provide specific search results.
+4. Rather than looking at a specific strain/isolate, let's just broadly look at all M. tuberculosis data.
+
+❓**Questions regarding the taxonomy data**
+- How many nucleotide sequences are available for Mycobacterium tuberculosis?
+- Are all these nucleotide sequences complete genomes?
+- How many Dataset Genomes are available (rememember to look at the Subtree links)?
+
+6. Let's take a look at the nucleotide sequences.
+7. We just want to look at complete genomes. Provide the additional keyword filter "Complete" to only display complete genomes. Hint: Remember it will be added to the search bar in addition to the taxonomic ID
+
+❓**Questions regarding the complete genome data**
+- How many complete genome sequences are available for Mycobacterium tuberculosis?
+- How many of these are Refseq genomes?
+
+8. Navigate to show only complete, Refseq genomes.
+9. Find Accession NZ_CP025593.1. Open it up to take a look at the metadata.
+
+❓**Questions regarding the complete genome data**
+- What year was this isolate collected?
+- Where was the isolate collected?
+- What was the name of the first author?
+- Although they may not link it to a publication, they give a dataset title and this can sometimes be used to find the (now) published data. Can you find the article?
+
+Despite having data for all organisms, NCBI does have the NCBI Virus database which curates viral sequences. Let's explore the NCBI Virus portal and answer some questions.
+
+1. Go to NCBI Virus (Hint: I find Google search is the best/fastest way to navigate here)
+2. Let's find data for mpox virus. Note: Not all virus taxonomy is currently up to date so you may see outdated nomenclature
+3. Let's do some filtering to find specific sequences:
+
+- Filter to only include B.1 lineage
+- Filter to have the **release date** be from Jan 1, 2025 to May 26, 2025
+
+❓**Questions regarding the filtered MPXV data**
+- How many B.1 lineage sequences have been released in 2025?
+- Do any of the sequence collection dates match the release dates? If not, what outbreak of MPXV does these appear to be associated with?
+  
+4. Let's clear those filters.
+
+❓**Questions regarding the *unfiltered* MPXV data**
+- How many MPXV sequences are available on NCBI Virus?
+- What is the Taxonomic ID of MPXV?
+- What is the earliest release date of a MPXV genome for NCBI Virus?
+- Where was geographic location of the most recent genome?
+
 ## GISAID
 
 Let's explore some GISAID data. As we discussed, GISAID is very popular with SARS-CoV2 sequencing data. They were originally designed for influenza data but unfortunately there are some restrictions that they place for this data. They also have some data for mpox virus and a few arboviruses. However, today we will leverage what it is most often used for: SARS-CoV2.
