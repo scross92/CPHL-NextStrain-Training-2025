@@ -33,6 +33,7 @@ Let's explore some GISAID data. As we discussed, GISAID is very popular with SAR
 - All samples had a single nucleotide polymorphism at position 5239. What was the nucleotide change? Hint: You will likely need to change the view of which genetic feature is highlighted.
   
 8. Now let's take a look at the other file that was generated when downloading the sequences.
+
 ❓**Questions regarding the downloaded Uganda SARS-CoV2 data**
 - Are any of the key metadata missing? What are the key metadata again that Nextstrain requires? Hint: If you need a refresher visit https://docs.nextstrain.org/en/latest/tutorials/creating-a-phylogenetic-workflow.html ("Prepare the Sequences" section)
 - What was the sex of the patient that was **not** from the Central region?
@@ -56,6 +57,7 @@ Great news! Pathoplexus just recently added in 3 new pathogens to their portfoli
 - Sequencing Date
 
 6. Now that we added in a variety of additional metadata, let's take a look and answer some questions:
+
 ❓**Questions regarding the refined Uganda HMPV data**
 - How many HMPV sequences are available for Uganda?
 - How many of these sequences are whole genome (or nearly whole genome)?
@@ -68,6 +70,7 @@ Great news! Pathoplexus just recently added in 3 new pathogens to their portfoli
 8. Refine your search to only have sequences that are near-complete. Do this by filtering for sequences that have a minimum length of >12,000 nucleotides. Download **only** these sequences in FASTA format.
 9. Go back to Nextclade. Note: You may need to clear the prior SARS-CoV2 data
 10. Add in your data, let it suggest a dataset (may need to hit the "Re-suggest" button) and then run Nextclade.
+
 ❓**Questions regarding the refined Uganda HMPV data with Nextclade**
 - Was there an appropriate Nextclade dataset? Will there *always* be an appropriate dataset?
 - How many mutations relative to the reference were noted?
