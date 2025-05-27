@@ -1,4 +1,4 @@
-# Geneious Exercises
+# Geneious Exercises: IN PERSON EXERCISE
 Now that we have covered the basics of Geneious, let's perform a few exercises to help us remember some useful tools that can be utilized in Geneious
 
 ## Mapping Reads to Reference Genome
