@@ -150,12 +150,30 @@ Let's go ahead and rename our sequences file at this time as well. Rename it as 
 
 # Run some Nextstrain on the files you collected!
 
-We now have a list of 302 sequences and a metadata file for these sequences. It is time to move into the Nextstrain portion. We have walked through the steps of a Nextstrain build multiple times now (both remote learning and earlier in this in person training). We will dig in and really flesh out the steps of a specialized config file for the pathogens of interest for CPHL. So to save time and energy, I have pulled together the necessary files and folders for running the Nexstrain build. Go ahead and copy these files by running this command:
+We now have a list of 302 sequences and a metadata file for these sequences. It is time to move into the Nextstrain portion. We have walked through the steps of a Nextstrain build multiple times now (both remote learning and earlier in this in person training). We will dig in and really flesh out the steps of a customized config file for the pathogens of interest for CPHL. So to save time and energy, I have pulled together the necessary files and folders for running the Nexstrain build. Go ahead and copy these files by running this command:
 
 ```
 git clone XXXX
 ```
-After it clones, it should 
+After it clones, it should now contain all the appropriate files and folders necessary to run a Nextstrain build. Go ahead and take a look at the pieces and remind yourself what the different files do:
+
+- What is the purpose of the config.yaml file?
+- What is the key link between the sequences.fasta and the metadata.tsv files?
+- What is the purpose of the Snakefile?
+
+Let's go ahead and run this Nextstrain build. Each step should hopefully take no more than a few minutes to run each one. Navigate to the appropriate directory and start the Nextstrain run. Let's go ahead and run it with 4 CPUs
+
+<details>
+  <summary><b>Click here for the answer</b></summary>
+  ```
+  # You should navigate to the 'main' directory for the Nextstrain build.
+  # This directory is the one that has the Snakefile in it
+  # Make sure that you are loaded into Nextstrain interface
+  nextstrain shell .
+  # Then go ahead and run the Nextstrain build
+  nextstrain build --cpus 4 .
+  ```
+</details>
 
 
 
