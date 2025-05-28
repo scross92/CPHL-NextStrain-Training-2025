@@ -91,7 +91,72 @@ Well, we are also going into another problem if we look at the isolate name. Wha
   Some of the strain names (Isolate Name) are blank. This is another key piece of information for Nextstrain.
 </details>
 
-So we could resolve this if we wanted to get fancy with some bioinformatics but Pathoplexus does just this already. If the Isolate Name is blank, then in the metadata file, it will automatically use the Pathoplexus accession number and collection country (where available). So let's start digging into that next portion. Go ahead and download the metadata file. Select 'Download all entries', except this time we are going to download the Metadata TSV file. You will see it automatically fills in selections for the metadata, but we know which fields we already want (see above). So let's only select those again. With our 9 choices plus the *required* Pathoplexus accession, we should have 10 total fields. Agree to the terms and download the metadata file. Go ahead and drag and drop the TSV file with excel to open it that way.
+So we could resolve this if we wanted to get fancy with some bioinformatics but Pathoplexus does just this already in one way. It will automatically use the Pathoplexus accession number and collection country (where available) rather than the actual strain name. Honestly, this isn't the optimal format, but it would take some more tweaking and coding to fix this. Therefore, we are going to just go with the new 'Pathoplexus strain' name for the remainder of this exercise. 
+
+So let's start digging into the metadata file. Go ahead and download the metadata file. Select 'Download all entries', except this time we are going to download the Metadata TSV file. You will see it automatically fills in selections for the metadata, but we know which fields we already want (see above). So let's only select those again. With our 9 choices plus the *required* Pathoplexus accession, we should have 10 total fields. Agree to the terms and download the metadata file. Go ahead and drag and drop the TSV file with excel to open it that way.
+
+One thing you should notice is the naming of the column headers is not exactly the same match as the 'filters' we selected. It still has the same information, but you just need to be careful about what each header is. For example, look at the "specimenCollectorSampleId". Can you figure out or decipher what this column is actually showing?
+
+<details>
+  <summary><b>Click here for the answer</b></summary>
+  This is the strain names (Isolate Name).
+</details>
+
+If we dig into the "specimenCollectorSampleId" column you notice the same issue as before. These are the blank strain names. When we download the fasta file, this isn't problematic as the strain names are captured, but we need these strain names in BOTH the metadata file and the FASTA file. Let's go ahead and downlad the FASTA file and then we can extract the strain names. Download the FASTA file for the L segment and select the "Display Name" as it will keep the appropriate strain name vs the Pathoplexus Accession number. Save the FASTA file in the same location as the metadata file. Save it as the default naming or choose a new name (we will switch the name regardless later)
+
+Let's go ahead and look at the first line of the FASTA file with 'head'. Make sure from the terminal window (WSL or Terminal) to be in the right directory. Adjust with the appropriate FASTA file name.
+
+```
+# look at only the first line--this is the first header
+head -n 1 [FASTA_FILE]
+```
+
+Looking at the first header, you can see it should (hopefully) be an example of a strain that was named after location, Pathoplexus accession number, and collection date. Can you find the respective file in the metadata TSV file?
+
+Let's go ahead and pull out all the strain names that we will need to add to the metadata file. This one liner of code should do the trick. Adjust with the appropriate file names.
+
+```
+# Extract strain names from FASTA
+grep ">" [FASTA_FILE] | sed 's/>//' > CCHFV_strains.txt
+```
+This now has created a text file of all the Pathoplexus associated strain names. This can now be added to the metadata file. We are going to make a new metadata file. Typically, in best practice, this is done in a CLI format. However, for ease of this training, we will go ahead and do this in a new excel file. However, we want to be **very** careful in how it is being named. 
+
+1. Make a new excel file, but then "Save As" as a tab delimited file. This by default uses .txt but we want .tsv
+2. Rename the file in your Finder window as metadata.tsv. If it asks to override the extension, just select yes
+3. Close the old file just to be safe and reopen the new metadata.tsv file
+
+Now that we have a new metadata.tsv file open, we are going to transfer over metadata from the Pathoplexus metadata file. It has some great information, but just named in a way that doesn't totally match what we would expect to use for Nextstrain.
+
+Make the following column headers:
+1. strain
+2. date
+3. region
+4. country
+5. is_lab_host
+6. host
+7. genbank_accession
+8. authors
+
+In each of these columns, migrate over the appropriate metadata. You'll find that one of these columns doesn't have associated metadata for one of these columns. Which one is it?
+
+<details>
+  <summary><b>Click here for the answer</b></summary>
+  Region
+</details>
+
+However, I have taken the time to go through and label all the regions. I have a metadata.tsv file saved in the 'Exercises' folder that you can download. First, rename your saved metadata.tsv file (e.g. metadata_generated.tsv). Compare your metadata_generated.tsv file against mine and see if it matches (with the exception of the filled in Regions column).
+
+Let's go ahead and rename our sequences file at this time as well. Rename it as sequences.fasta. We are now getting ready to move into the Nextstrain build steps.
+
+# Run some Nextstrain on the files you collected!
+
+We now have a list of 302 sequences and a metadata file for these sequences. It is time to move into the Nextstrain portion. We have walked through the steps of a Nextstrain build multiple times now (both remote learning and earlier in this in person training). We will dig in and really flesh out the steps of a specialized config file for the pathogens of interest for CPHL. So to save time and energy, I have pulled together the necessary files and folders for running the Nexstrain build. Go ahead and copy these files by running this command:
+
+```
+git clone XXXX
+```
+After it clones, it should 
+
 
 
 
