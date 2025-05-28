@@ -164,10 +164,19 @@ After it clones, it should now contain all the appropriate files and folders nec
 Let's go ahead and run this Nextstrain build. Each step should hopefully take no more than a few minutes to run each one. Navigate to the appropriate directory and start the Nextstrain run. Let's go ahead and run it with 4 CPUs
 
 <details>
-  <summary><b>Click here for the answer</b></summary>
-  ```ruby
-   puts "Hello World"
-  ```
+  <summary>Click to show shell script</summary>
+
+    
+    ```bash
+    #!/bin/bash
+    # Navigate to the appropriate directory
+    # This 'main' directory has the subdirectories in it as well as the Snakefile
+    # Load into a Nextstrain prompt
+    nextstrain shell .
+    # Go ahead and run the Nexstrain build with 4 CPUs
+    nextstrain build --cpus 4 .
+    ```
+
 </details>
 
 
