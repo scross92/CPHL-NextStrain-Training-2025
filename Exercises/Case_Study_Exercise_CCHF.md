@@ -50,15 +50,15 @@ Pathoplexus has LOTS of different metadata fields. Let's look at a few that are 
 
 <details>
   <summary><b>Click here for the boxes that should be selected</b></summary>
-  Length L
-  Author Affiliations
-  Author
-  Host Name-Scientific
-  Is Lab Host (This is to known if it was a cultured virus in the lab)
-  INSDC accesssion L
-  Collection Country
-  Collection Date
-  Isolate Name (this is the strain name)
+  - Length L
+  - Author Affiliations
+  - Author
+  - Host Name-Scientific
+  - Is Lab Host (This is to known if it was a cultured virus in the lab)
+  - INSDC accesssion L
+  - Collection Country
+  - Collection Date
+  - Isolate Name (this is the strain name)
 </details>
 
 Ok, let's take a closer look again with this "critical" metadata. Play around with reorganizing the data by clicking the column headers. Uh oh, looks like some metadata may be missing. However, what is one REALLY important Nextstrain metadata field that has a clear problem here that doesn't have a workaround?
