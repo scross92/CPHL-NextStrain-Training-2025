@@ -50,14 +50,23 @@ Pathoplexus has LOTS of different metadata fields. Let's look at a few that are 
 
 <details>
   <summary><b>Click here for the boxes that should be selected</b></summary>
+  
   - Length L
+  
   - Author Affiliations
+  
   - Author
+  
   - Host Name-Scientific
+  
   - Is Lab Host (This is to known if it was a cultured virus in the lab)
+  
   - INSDC accesssion L
+  
   - Collection Country
+  
   - Collection Date
+  
   - Isolate Name (this is the strain name)
 </details>
 
