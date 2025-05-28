@@ -165,13 +165,13 @@ Let's go ahead and run this Nextstrain build. Each step should hopefully take no
 
 <details>
   <summary><b>Click here for the answer</b></summary>
-  ```
-  # You should navigate to the 'main' directory for the Nextstrain build.
-  # This directory is the one that has the Snakefile in it
-  # Make sure that you are loaded into Nextstrain interface
-  nextstrain shell .
-  # Then go ahead and run the Nextstrain build
-  nextstrain build --cpus 4 .
+  ```shell
+    # You should navigate to the 'main' directory for the Nextstrain build.
+    # This directory is the one that has the Snakefile in it
+    # Make sure that you are loaded into Nextstrain interface
+    nextstrain shell .
+    # Then go ahead and run the Nextstrain build
+    nextstrain build --cpus 4 .
   ```
 </details>
 
