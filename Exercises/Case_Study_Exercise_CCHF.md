@@ -167,14 +167,14 @@ Let's go ahead and run this Nextstrain build. Each step should hopefully take no
   <summary>Click to show shell script</summary>
 
     
-    <pre><code class="language-bash">#!/bin/bash
-    # Navigate to the appropriate directory
-    # This 'main' directory has the subdirectories in it as well as the Snakefile
-    # Load into a Nextstrain prompt
-    nextstrain shell .
-    # Go ahead and run the Nexstrain build with 4 CPUs
-    nextstrain build --cpus 4 .
-    </code></pre>
+  <pre><code class="language-bash">#!/bin/bash
+  # Navigate to the appropriate directory
+  # This 'main' directory has the subdirectories in it as well as the Snakefile
+  # Load into a Nextstrain prompt
+  nextstrain shell .
+  # Go ahead and run the Nexstrain build with 4 CPUs
+  nextstrain build --cpus 4 .
+  </code></pre>
 
 </details>
 
