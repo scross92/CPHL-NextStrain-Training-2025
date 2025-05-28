@@ -7,7 +7,12 @@ If you are working on this case study exercise, you will be downloading CCHFV da
 The first thing that we need to do is to actually find the data. Navigate to the CCHFV dataset with Pathoplexus. If you notice, there are quite a few sequences readily available. However, we want to be particular about what sequences we are using (plus this will make our lives significantly better when we run the build itself). If you notice, in the default settings there are 3 pieces of metadata that are seemingly unique--Length L, Length M, Length S. What do you think these correspond to? Hint: CCHFV is a bunyavirus which has a unique genome structure (https://viralzone.expasy.org/250?outline=all_by_species).
 <details>
   <summary><b>Click here for the answer</b></summary>
-  <b>WOW, SO BOLD</b>
+  Bunyavirus genomes are tripartite. They are composed of an L, M, and S genome (Large, Medium, Small)
 </details>
 
 We are going to explore just one of these viral proteins, the L protein which encodes the RNA-Dependent RNA polymerase. If you just look at the first 4 sequences, what is something major that just will not work for our analysis? Hint: Look at those same unique column headers.
+<details>
+  <summary><b>Click here for the answer</b></summary>
+  The length of the L segment sequences vary drastically in size. Some are near complete while others are just fractions of the genome.
+</details>
+
