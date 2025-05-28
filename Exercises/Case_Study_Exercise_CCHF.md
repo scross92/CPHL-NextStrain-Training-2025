@@ -164,10 +164,10 @@ After it clones, it should now contain all the appropriate files and folders nec
 Let's go ahead and run this Nextstrain build. Each step should hopefully take no more than a few minutes to run each one. Navigate to the appropriate directory and start the Nextstrain run. Let's go ahead and run it with 4 CPUs
 
 <details>
-  <summary>Click to show shell script</summary>
+  <summary>Click to show answer/commands</summary>
 
     
-  <pre><code class="language-bash">#!/bin/bash
+  <pre><code class="language-bash">
   # Navigate to the appropriate directory
   # This 'main' directory has the subdirectories in it as well as the Snakefile
   # Load into a Nextstrain prompt
