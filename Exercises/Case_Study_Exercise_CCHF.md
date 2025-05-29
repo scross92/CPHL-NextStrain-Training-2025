@@ -68,6 +68,8 @@ Pathoplexus has LOTS of different metadata fields. Let's look at a few that are 
   - Collection Date
   
   - Isolate Name (this is the strain name)
+
+  - Display Name
 </details>
 
 Ok, let's take a closer look again with this "critical" metadata. Play around with reorganizing the data by clicking the column headers. Uh oh, looks like some metadata may be missing. However, what is one REALLY important Nextstrain metadata field that has a clear problem here that doesn't have a workaround?
@@ -91,9 +93,9 @@ Well, we are also going into another problem if we look at the isolate name. Wha
   Some of the strain names (Isolate Name) are blank. This is another key piece of information for Nextstrain.
 </details>
 
-So we could resolve this if we wanted to get fancy with some bioinformatics but Pathoplexus does just this already in one way. It will automatically use the Pathoplexus accession number and collection country (where available) rather than the actual strain name. Honestly, this isn't the optimal format, but it would take some more tweaking and coding to fix this. Therefore, we are going to just go with the new 'Pathoplexus strain' name for the remainder of this exercise. 
+So we could resolve this if we wanted to get fancy with some bioinformatics and mining NCBI databases, but Pathoplexus does just this already in one way. It will automatically use the Pathoplexus accession number and collection country (where available) rather than the actual strain name. This information is saved under 'Display Name'. Honestly, this isn't the optimal format, but it would take some more tweaking and signficant time to fix this. Therefore, we are going to just go with the new 'Pathoplexus strain' name for the remainder of this exercise. 
 
-So let's start digging into the metadata file. Go ahead and download the metadata file. Select 'Download all entries', except this time we are going to download the Metadata TSV file. You will see it automatically fills in selections for the metadata, but we know which fields we already want (see above). So let's only select those again. With our 9 choices plus the *required* Pathoplexus accession, we should have 10 total fields. Agree to the terms and download the metadata file. Go ahead and drag and drop the TSV file with excel to open it that way.
+So let's start digging into the metadata file. Go ahead and download the metadata file. Select 'Download all entries', except this time we are going to download the Metadata TSV file. You will see it automatically fills in selections for the metadata, but we know which fields we already want (see above). So let's only select those again. With our 10 choices plus the *required* Pathoplexus accession, we should have 11 total fields. Agree to the terms and download the metadata file. Go ahead and drag and drop the TSV file with excel to open it that way.
 
 One thing you should notice is the naming of the column headers is not exactly the same match as the 'filters' we selected. It still has the same information, but you just need to be careful about what each header is. For example, look at the "specimenCollectorSampleId". Can you figure out or decipher what this column is actually showing?
 
@@ -102,7 +104,9 @@ One thing you should notice is the naming of the column headers is not exactly t
   This is the strain names (Isolate Name).
 </details>
 
-If we dig into the "specimenCollectorSampleId" column you notice the same issue as before. These are the blank strain names. When we download the fasta file, this isn't problematic as the strain names are captured, but we need these strain names in BOTH the metadata file and the FASTA file. Let's go ahead and downlad the FASTA file and then we can extract the strain names. Download the FASTA file for the L segment and select the "Display Name" as it will keep the appropriate strain name vs the Pathoplexus Accession number. Save the FASTA file in the same location as the metadata file. Save it as the default naming or choose a new name (we will switch the name regardless later)
+If we dig into the "specimenCollectorSampleId" column you notice the same issue as before. These are the blank strain names. We however will resolve this by just focusing on the way Pathoplexus names its strains under the Display Name category. 
+
+Download the FASTA file for the L segment and select the "Display Name" as it will keep the appropriate strain name vs the Pathoplexus Accession number. Save the FASTA file in the same location as the metadata file. Save it as the default naming or choose a new name (we will switch the name regardless later)
 
 Let's go ahead and look at the first line of the FASTA file with 'head'. Make sure from the terminal window (WSL or Terminal) to be in the right directory. Adjust with the appropriate FASTA file name.
 
@@ -113,13 +117,7 @@ head -n 1 [FASTA_FILE]
 
 Looking at the first header, you can see it should (hopefully) be an example of a strain that was named after location, Pathoplexus accession number, and collection date. Can you find the respective file in the metadata TSV file?
 
-Let's go ahead and pull out all the strain names that we will need to add to the metadata file. This one liner of code should do the trick. Adjust with the appropriate file names.
-
-```
-# Extract strain names from FASTA
-grep ">" [FASTA_FILE] | sed 's/>//' > CCHFV_strains.txt
-```
-This now has created a text file of all the Pathoplexus associated strain names. This can now be added to the metadata file. We are going to make a new metadata file. Typically, in best practice, this is done in a CLI format. However, for ease of this training, we will go ahead and do this in a new excel file. However, we want to be **very** careful in how it is being named. 
+We are going to make a new metadata file. Typically, in best practice, this is done in a CLI format. However, for ease of this training, we will go ahead and do this in a new excel file. However, we want to be **very** careful in how it is being named. 
 
 1. Open a new excel file, and "Save As" "metadata_example" AND as a tab delimited file. This by default uses .txt but we want .tsv
 2. Rename the file in your Finder window from "metadata_example.txt" to "metadata_example.tsv". If it asks to override the extension, just select yes
@@ -137,7 +135,7 @@ Make the following column headers:
 7. genbank_accession
 8. authors
 
-In each of these columns, migrate over the appropriate metadata. You'll find that one of these columns doesn't have associated metadata for one of these columns. Which one is it?
+In each of these columns, migrate over the appropriate metadata. Remember we will use 'Display Name' for strain You'll find that one of these columns doesn't have associated metadata for one of these columns. Which one is it?
 
 <details>
   <summary><b>Click here for the answer</b></summary>
