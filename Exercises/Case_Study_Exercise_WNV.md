@@ -123,20 +123,20 @@ Let's go ahead and look at the first line of the FASTA file with 'head'. Make su
 head -n 1 [FASTA_FILE]
 ```
 
-Looking at the first header, you can see it should (hopefully) be an example of a strain that was named after location, Pathoplexus accession number, and collection date. Can you find the respective file in the metadata TSV file?
+Can you find the respective file in the metadata TSV file?
+
+As a reminder, Pathoplexus has solved the issue of strain names by giving it 'custom' strain names. Looking at the first sample in the metadata file, can you figure out how Pathoplexus names the strains? 
+
+<details>
+  <summary><b>Click here for the answer</b></summary>
+  Strain are named after location, Pathoplexus accession number, and collection date
+</details>
 
 We are going to make a new metadata file. Typically, in best practice, this is done in a CLI format. However, for ease of this training, we will go ahead and do this in a new excel file. However, we want to be **very** careful in how it is being named. 
 
 1. Open a new excel file, and "Save As" "metadata_example" AND as a tab delimited file. This by default uses .txt but we want .tsv
 2. Rename the file in your Finder window from "metadata_example.txt" to "metadata_example.tsv". If it asks to override the extension, just select yes
 3. Close the old file just to be safe and reopen the new metadata.tsv file
-
-As a reminder, Pathoplexus has solved this issue by giving it 'custom' strain names. Looking at the first sample in the metadata file, can you figure out how Pathoplexus names the strains? 
-
-<details>
-  <summary><b>Click here for the answer</b></summary>
-  Strain are named after location, Pathoplexus accession number, and collection date
-</details>
 
 Now that we have a new metadata_example.tsv file open, we are going to transfer over metadata from the Pathoplexus metadata file. It has some great information, but just named in a way that doesn't totally match what we would expect to use for Nextstrain.
 
@@ -181,7 +181,7 @@ We are now getting ready to move into the Nextstrain build steps.
 
 # Run some Nextstrain on the files you collected!
 
-We now have a list of 302 sequences and a metadata file for these sequences. It is time to move into the Nextstrain portion. We have walked through the steps of a Nextstrain build multiple times now (both remote learning and earlier in this in person training). We will dig in and really flesh out the steps of a customized config file for the pathogens of interest for CPHL. So to save time and energy, I have pulled together the necessary files and folders for running the Nexstrain build. Go ahead and copy these files by running this command:
+We now have a list of 553 sequences and a metadata file for these sequences. It is time to move into the Nextstrain portion. We have walked through the steps of a Nextstrain build multiple times now (both remote learning and earlier in this in person training). We will dig in and really flesh out the steps of a customized config file for the pathogens of interest for CPHL. So to save time and energy, I have pulled together the necessary files and folders for running the Nexstrain build. Go ahead and copy these files by running this command:
 
 ```
 git clone XXXX
