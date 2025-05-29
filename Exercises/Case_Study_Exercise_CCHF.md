@@ -115,7 +115,14 @@ Let's go ahead and look at the first line of the FASTA file with 'head'. Make su
 head -n 1 [FASTA_FILE]
 ```
 
-Looking at the first header, you can see it should (hopefully) be an example of a strain that was named after location, Pathoplexus accession number, and collection date. Can you find the respective file in the metadata TSV file?
+Can you find the respective file in the metadata TSV file?
+
+As a reminder, Pathoplexus has solved the issue of strain names by giving it 'custom' strain names. Looking at the first sample in the metadata file, can you figure out how Pathoplexus names the strains? 
+
+<details>
+  <summary><b>Click here for the answer</b></summary>
+  Strain are named after location, Pathoplexus accession number, and collection date
+</details>
 
 We are going to make a new metadata file. Typically, in best practice, this is done in a CLI format. However, for ease of this training, we will go ahead and do this in a new excel file. However, we want to be **very** careful in how it is being named. 
 
