@@ -1,0 +1,35 @@
+inputs:
+  sequences: data/sequences.fasta
+  metadata: data/metadata.tsv
+  reference: config/reference.gb
+
+traits:
+  columns: "region country host"
+
+builds:
+  cchfv_l_segment:
+    subsampling_scheme: filtered
+    title: "CCHFV L Segment (Non-Lab Hosts)"
+    traits:
+      columns: ["region", "country", "host"]
+
+filter:
+  min_date: 1956-01-01
+  max_date: 2025-12-31
+  query: "is_lab_host != 'TRUE'" 
+  query_columns:
+    is_lab_host: str
+  exclude: data/dropped_strains.txt
+  include: null
+
+subsampling:
+  filtered:
+    group_by: "country"
+    max_sequences: 200
+
+export:
+  geo_resolutions: ["region", "country"]
+  colorings:
+    - host
+    - country
+    - year
