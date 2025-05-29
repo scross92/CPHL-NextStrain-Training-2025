@@ -201,7 +201,13 @@ Great! Let's answer some questions from this successful Nextstrain build.
 ❓**Questions to Answer about the CCHFV Build**
 
 1. How many sequences are used for this Nextstrain build? Does this match the number of expected sequences after all our filtering *before* running Nextstrain? What caused this difference? Hint: Look either at the Nextstrain outputs by scrolling up to see what happened at each step OR take a look at the config file.
-2. 
+2. Follow-up question, from this information, what is the reason why these sequences were not included in the build? Hint: Take a look at the metadata file and see if you notice any specific metadata that is only observed in these strains/samples.
+3. What strain has the greatest divergence from the reference sequence?
+4. When you look at the tree and sequences, do these sequences appear to cluster by their host type?
+5. Generally speaking, what appears to be the feature that is responsible for the most genetic similarities of sequenced strains?
+6. If you visualize these sequences by region, there appears to be something that doesn't fit for the distribution of CCHFV. What region appears to be a potential issue? (Hint: Look at the global distribution of CCHFV)
+7. Taking time to examine the data in this format may highlight sequences that didn't get captured in our initial exclusion criteria. Look at the 3 strains from this region and take a look at some of the respective metadata (using Nextstrain). What do you think could be possible cases for these strains being linked to USA?
+8. Let's say we didn't want to include these next time, what are ways that we could filter these WITHOUT removing them from the original sequences.fasta and metadata.tsv files?
 
-
+### Congrats! You've successfully walked through a Nextstrain build for CCHFV! 
 
