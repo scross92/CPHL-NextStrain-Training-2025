@@ -205,7 +205,7 @@ Great! Let's answer some questions from this successful Nextstrain build.
 3. What strain has the greatest divergence from the reference sequence?
 4. When you look at the tree and sequences, do these sequences appear to cluster by their host type?
 5. Generally speaking, what appears to be the feature that is responsible for the most genetic similarities of sequenced strains?
-6. If you visualize these sequences by region, there appears to be something that doesn't fit for the distribution of CCHFV. What region appears to be a potential issue? (Hint: Look at the global distribution of CCHFV)
+6. If you visualize these sequences by region, there appears to be something that doesn't fit for the distribution of CCHFV. What region appears to be a potential issue? (Hint: Look at the global distribution of CCHFV https://www.who.int/multi-media/details/geographic-distribution-of-crimean-congo-haemorrhagic-fever)
 7. Taking time to examine the data in this format may highlight sequences that didn't get captured in our initial exclusion criteria. Look at the 3 strains from this region and take a look at some of the respective metadata (using Nextstrain). What do you think could be possible cases for these strains being linked to USA?
 8. Let's say we didn't want to include these next time, what are ways that we could filter these WITHOUT removing them from the original sequences.fasta and metadata.tsv files?
 
