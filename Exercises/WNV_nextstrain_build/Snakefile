@@ -1,0 +1,136 @@
+configfile: "config/config.yaml"
+
+rule all:
+    input:
+        "auspice/wnv-lineage1A.json"
+
+rule filter:
+    input:
+        sequences=config["inputs"]["sequences"],
+        metadata=config["inputs"]["metadata"],
+	    exclude=config["filter"]["exclude"],
+        include=config["filter"]["include"]
+    output:
+        sequences="results/filtered_sequences.fasta",
+        metadata="results/filtered_metadata.tsv"
+    params:
+        query=config["filter"]["query"],
+        query_columns=config["filter"]["query_columns"],
+        min_date=config["filter"]["min_date"],
+        max_date=config["filter"]["max_date"],
+	query_column_flags=" ".join(
+            f"--query-columns {k}:{v}" for k, v in config["filter"]["query_columns"].items()
+        )
+    shell:
+        """
+        augur filter \
+            --sequences {input.sequences} \
+            --metadata {input.metadata} \
+            --output {output.sequences} \
+            --output-metadata {output.metadata} \
+            --min-date {params.min_date} \
+            --max-date {params.max_date} \
+            --min-length 10000 \
+	        --exclude {input.exclude} \
+            --include {input.include} \
+            --query "{params.query}" \
+            {params.query_column_flags}
+        """
+
+rule align:
+    input:
+        sequences="results/filtered_sequences.fasta"
+    output:
+        alignment="results/aligned.fasta"
+    params:
+        reference=config["inputs"]["reference"]
+    shell:
+        """
+        augur align \
+            --sequences {input.sequences} \
+            --reference-sequence {params.reference} \
+            --output {output.alignment} \
+            --fill-gaps \
+            --remove-reference \
+        """
+
+rule tree:
+    input:
+        alignment="results/aligned.fasta"
+    output:
+        tree="results/tree.nwk"
+    shell:
+        """
+        augur tree \
+            --alignment {input.alignment} \
+            --output {output.tree}
+        """
+
+rule refine:
+    input:
+        tree="results/tree.nwk",
+        alignment="results/aligned.fasta",
+        metadata="results/filtered_metadata.tsv"
+    output:
+        tree="results/refined_tree.nwk",
+        node_data="results/branch_lengths.json"
+    params:
+        root=config["inputs"]["root"],
+        reference="config/reference.gb",
+        treetime_params=" ".join(filter(None, [
+            f"--coalescent {config['refine']['coalescent']}",
+            f"--date-inference {config['refine']['date_inference']}",
+            "--date-confidence" if config['refine']['date_confidence'] else "",
+            "--keep-polytomies" if config['refine']['keep_polytomies'] else "",
+            f"--clock-rate {config['refine']['clock_rate']}",
+            "--remove-outgroup" if config['refine']['remove_outgroup'] else "",
+        ]))
+    shell:
+        """
+        augur refine \
+            --tree {input.tree} \
+            --alignment {input.alignment} \
+            --metadata {input.metadata} \
+            --output-tree {output.tree} \
+            --output-node-data {output.node_data} \
+            --root {params.root} \
+            --timetree \
+            {params.treetime_params}
+        """
+
+rule traits:
+    input:
+        tree="results/refined_tree.nwk",
+        metadata="results/filtered_metadata.tsv"
+    output:
+        traits="results/traits.json"
+    params:
+        columns=config["traits"]["columns"]
+    shell:
+        """
+        augur traits \
+            --tree {input.tree} \
+            --metadata {input.metadata} \
+            --output {output.traits} \
+            --columns {params.columns}
+        """
+
+rule export:
+    input:
+        tree="results/refined_tree.nwk",
+        node_data="results/branch_lengths.json",
+        metadata="results/filtered_metadata.tsv",
+        traits="results/traits.json"
+    output:
+        json="auspice/wnv-lineage1A.json"
+    params:
+        color_by="region country division host date"
+    shell:
+        """
+        augur export v2 \
+            --tree {input.tree} \
+            --node-data {input.node_data} {input.traits} \
+            --metadata {input.metadata} \
+            --output {output.json} \
+	    --color-by {params.color_by}
+        """

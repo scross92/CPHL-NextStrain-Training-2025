@@ -1,0 +1,2 @@
+KX394399 # Lineage 1B outgroup
+NC_009942 # Lineage 1 reference

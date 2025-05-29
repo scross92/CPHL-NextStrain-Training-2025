@@ -1,0 +1,46 @@
+inputs:
+  sequences: data/sequences.fasta
+  metadata: data/metadata.tsv
+  reference: config/reference.gb
+  root: "KX394399"
+
+traits:
+  columns: "region country division host"
+
+builds:
+  WNV_lineage1A:
+    subsampling_scheme: filtered
+    title: "WNV Lineage 1A 2018-2025 (Non-Lab Hosts)"
+    traits:
+      columns: ["region", "country", "division", "host"]
+
+filter:
+  min_date: 1960-01-01 #making this date to make sure to include root sequence
+  max_date: 2025-12-31
+  exclude: data/dropped_strains.txt
+  include: data/include_strains.txt
+  query: "is_lab_host != 'true' and lineage == '1A'"
+  query_columns:
+    is_lab_host: str
+    lineage: str
+
+subsampling:
+  region: --query "is_lab_host != 'true' & lineage == '1A'" --query-columns is_lab_host:str --min-length '10000' --group-by region year --subsample-max-sequences 500
+  filtered:
+    group_by: "country"
+    max_sequences: 500
+
+# Clock rate from Table 1 of May et al, 2010: https://pmc.ncbi.nlm.nih.gov/articles/PMC3067944/
+refine:
+  coalescent: opt
+  date_inference: marginal
+  date_confidence: true
+  keep_polytomies: true
+  clock_rate: 0.00106
+  remove_outgroup: true
+export:
+  geo_resolutions: ["region", "country"]
+  colorings:
+    - host
+    - country
+    - year
