@@ -215,13 +215,15 @@ Great! Let's answer some questions from this successful Nextstrain build.
 
 ❓**Questions to Answer about the CCHFV Build**
 
-1. How many sequences are used for this Nextstrain build? Does this match the number of expected sequences after all our filtering *before* running Nextstrain? What caused this difference? Hint: Look either at the Nextstrain outputs by scrolling up to see what happened at each step OR take a look at the config file.
-2. Follow-up question, from this information, what is the reason why these sequences were not included in the build? Hint: Take a look at the metadata file and see if you notice any specific metadata that is only observed in these strains/samples.
-3. What strain has the greatest divergence from the reference sequence?
-4. When you look at the tree and sequences, do these sequences appear to cluster by their host type?
-5. Generally speaking, what appears to be the feature that is responsible for the most genetic similarities of sequenced strains?
-6. If you visualize these sequences by region, there appears to be something that doesn't fit for the distribution of CCHFV. What region appears to be a potential issue? (Hint: Look at the global distribution of CCHFV https://www.who.int/multi-media/details/geographic-distribution-of-crimean-congo-haemorrhagic-fever)
-7. Taking time to examine the data in this format may highlight sequences that didn't get captured in our initial exclusion criteria. Look at the 3 strains from this region and take a look at some of the respective metadata (using Nextstrain). What do you think could be possible cases for these strains being linked to USA?
-8. Let's say we didn't want to include these next time, what are ways that we could filter these WITHOUT removing them from the original sequences.fasta and metadata.tsv files?
+1. How many sequences are used for this Nextstrain build? Does this match the number of expected sequences after all our filtering *before* running Nextstrain? What caused this difference? Hint: Look either at the Nextstrain outputs by scrolling up to see what happened at each step.
+2. Follow-up question, from this information, what is the reason why these sequences were not included in the build?
+3. You may also notice in the Nextstrain output that it added back one of those sequences. I put an extra sequence in here for rooting. We will talk about choosing good roots more when we do custom builds, but can you figure out what was the root? Hint: Look at the data folder to see which strains were *required* to be included.
+4. What strain has the greatest divergence from the reference sequence? (Hint: Remember to change the layout for the Branch Length)
+5. When you look at the tree and sequences, do these sequences appear to cluster by their host type?
+6. What host (broadly speaking) appears to be the source for many of these viral genomes?
+7. Generally speaking, what appears to be the feature that is responsible for the most genetic similarities of sequenced strains?
+8. If you visualize these sequences by region, what region appears to dominate for the most viral sequences? Refine it further, what country do most of these sequences come from? And one more level of refinement, what division?
+9. Take a look at the author data for the most common state, and let's look at their lab research (https://grubaughlab.com/research/). Does it make sense that they would be a large contributor to WNV genome sequences? By the way, Dr. Grubaugh and his team are big contributors to the Nextstrain community (https://grubaughlab.com/nextstrain/).
+10. When looking at the data by division, there is a particular division (U.S. state) that appears to form a single clade. Can you identify that clade and the division?
 
-### Congrats! You've successfully walked through a Nextstrain build for CCHFV! 
+### Congrats! You've successfully walked through a Nextstrain build for WNV! 
