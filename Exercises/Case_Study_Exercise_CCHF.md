@@ -121,11 +121,11 @@ grep ">" [FASTA_FILE] | sed 's/>//' > CCHFV_strains.txt
 ```
 This now has created a text file of all the Pathoplexus associated strain names. This can now be added to the metadata file. We are going to make a new metadata file. Typically, in best practice, this is done in a CLI format. However, for ease of this training, we will go ahead and do this in a new excel file. However, we want to be **very** careful in how it is being named. 
 
-1. Make a new excel file, but then "Save As" as a tab delimited file. This by default uses .txt but we want .tsv
-2. Rename the file in your Finder window as metadata.tsv. If it asks to override the extension, just select yes
+1. Open a new excel file, and "Save As" "metadata_example" AND as a tab delimited file. This by default uses .txt but we want .tsv
+2. Rename the file in your Finder window from "metadata_example.txt" to "metadata_example.tsv". If it asks to override the extension, just select yes
 3. Close the old file just to be safe and reopen the new metadata.tsv file
 
-Now that we have a new metadata.tsv file open, we are going to transfer over metadata from the Pathoplexus metadata file. It has some great information, but just named in a way that doesn't totally match what we would expect to use for Nextstrain.
+Now that we have a new metadata_example.tsv file open, we are going to transfer over metadata from the Pathoplexus metadata file. It has some great information, but just named in a way that doesn't totally match what we would expect to use for Nextstrain.
 
 Make the following column headers:
 1. strain
@@ -144,9 +144,25 @@ In each of these columns, migrate over the appropriate metadata. You'll find tha
   Region
 </details>
 
-However, I have taken the time to go through and label all the regions. I have a metadata.tsv file saved in the 'Exercises' folder that you can download. First, rename your saved metadata.tsv file (e.g. metadata_generated.tsv). Compare your metadata_generated.tsv file against mine and see if it matches (with the exception of the filled in Regions column).
+However, I have taken the time to go through and label all the regions. 
 
-Let's go ahead and rename our sequences file at this time as well. Rename it as sequences.fasta. We are now getting ready to move into the Nextstrain build steps.
+There is also another issue and a major reason I prefer to avoid excel altogether when handling metadata. If looking at excel, look at the date formatting (easiest observation is on the last sequences). What do you notice about this formatting versus what Nextstrain formatting takes?
+
+<details>
+  <summary><b>Click here for the answer</b></summary>
+  Nextstrain wants the date formatted as YYYY-MM-DD but excel automatically will format as MM/DD/YYYY
+</details>
+
+This is something to be really aware of when you think about what tools you are using to generate your metadata. If we ran the build with this default excel formatting, these samples would be removed during the filter step!
+
+I have a metadata.tsv file saved in the 'Exercises' folder that you can download that uses the correct date format and also includes the region information. Compare your metadata_example.tsv file against mine and see if it matches (with the exception of the filled in Regions column and the date formatting).
+
+Let's go ahead and rename our sequences file at this time as well. Rename it as sequences.fasta. You can do this in one of two ways. 
+
+1. Use the CLI and use the mv function (mv [FASTA_FILE] sequences.fasta)
+2. Use the finder window and rename the file as sequences.fasta
+
+We are now getting ready to move into the Nextstrain build steps.
 
 # Run some Nextstrain on the files you collected!
 
@@ -178,7 +194,14 @@ Let's go ahead and run this Nextstrain build. Each step should hopefully take no
 
 </details>
 
+Hopefully it ran successfully! Let's take a quick look at the auspice file. Go to auspice.us and drop in your JSON file (look for the appropriate auspice folder to find it). 
 
+Great! Let's answer some questions from this successful Nextstrain build.
+
+❓**Questions to Answer about the CCHFV Build**
+
+1. How many sequences are used for this Nextstrain build? Does this match the number of expected sequences after all our filtering *before* running Nextstrain? What caused this difference? Hint: Look either at the Nextstrain outputs by scrolling up to see what happened at each step OR take a look at the config file.
+2. 
 
 
 
