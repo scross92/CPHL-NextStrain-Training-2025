@@ -2,11 +2,11 @@
 Now that we have covered the basics of Geneious, let's perform a few exercises to help us remember some useful tools that can be utilized in Geneious
 
 ## Mapping Reads to Reference Genome
-We have performed some prior sequencing to West Nile virus (WNV) in contrived mosquito samples. We had used hybrid capture enrichment sequencing to try and capture as much WNV as possible. (Not sure what hybrid capture sequencing is? Here is a good primer on it: ). We have already previously trimmed the reads to remove adapter sequences and have removed poor quality reads. Let's use this data to practice analyzing mapped reads in Geneious.
+We have performed some prior sequencing to West Nile virus (WNV) in contrived mosquito samples. We had used hybrid capture enrichment sequencing to try and capture as much WNV as possible. (Not sure what hybrid capture sequencing is? Here is a good primer on it: https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2018.02924/full). We have already previously trimmed the reads to remove adapter sequences and have removed poor quality reads. Let's use this data to practice analyzing mapped reads in Geneious.
 
 1. First let's make a new directory/folder for doing this exercise. Create a new folder and name it "Geneious Exercises." In that folder make a new subfolder and call it "Mapping Exercise."
 2. Now download an appropriate reference genome for WNV. Download the file directly into Geneious, using the NCBI->Nucleotide interface (search for NC_009942). Once downloaded, drag from the NCBI download folder into the "Mapping Exercise" folder in Geneious. It will likely only download a portion, select the genome and click the "Download" button in the Document Viewer section.
-3. Let's download the practice dataset. It can be found in this Google Drive link:
+3. Let's download the practice dataset. It can be found in this Google Drive  link:https://drive.google.com/drive/folders/1YC_JL5r6GUPMzt_kBUVtQbulOy0CBp_Y?usp=sharing
 4. After you download the data--Remember to download both Read 1 and Read 2 (R1, R2)--go ahead and drop it into Geneious. It will ask about if this should be paired data, select yes, and you can keep default settings for the insert length; we will check if this was the best choice later.
 5. Now let's map the reads to the reference. We can just use the Geneious aligner with default settings. Make sure you choose the appropriate file for the reference genome! Hint: Look at the Toolbar and identify the the Align/Assemble toolkits.
 6. It should take a couple minutes to run, but then it will spit out both a report and the alignment file. Let's dig in and answer some questions.
