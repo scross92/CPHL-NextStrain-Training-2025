@@ -74,5 +74,5 @@ Geneious is a powerful tool that allows for quick identification and quality con
 
 Manually inspecting your data is often essential. Having an understanding of *what* your data is showing gives you a better understanding what can happen in subsequent analyses/steps (e.g. Nextstrain). 
 
-Always look for documentation as much as possible for tools. Geneious offers a fairly robust manual for their default toolkits. See here: https://manual.geneious.com/en/latest/index.html 
+Always look for documentation as much as possible for tools. Geneious offers a fairly robust manual for their default toolkits. See here: https://manual.geneious.com/en/latest/index.html and https://www.geneious.com/academy 
 
