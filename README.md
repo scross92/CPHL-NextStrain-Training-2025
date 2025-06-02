@@ -37,5 +37,10 @@ We will be navigating various databases and using GUI bioinformatic tools (i.e. 
 3) Request access to Pathoplexus here: https://authentication.pathoplexus.org/realms/loculus/protocol/openid-connect/auth?client_id=backend-client&scope=openid&response_type=code&redirect_uri=https%3A%2F%2Fpathoplexus.org%2F
 (Select the "New User? Register" button at the bottom under ORCID Login) 
 4) Request an NCBI user account here: https://www.ncbi.nlm.nih.gov/account/
+ 
+## Google Drive with Documents:
+
+Geneious Practice: https://drive.google.com/drive/u/0/folders/1YC_JL5r6GUPMzt_kBUVtQbulOy0CBp_Y
+
 
 
