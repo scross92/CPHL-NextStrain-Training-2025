@@ -61,7 +61,7 @@ Let's explore some GISAID data. As we discussed, GISAID is very popular with SAR
 2. Under EpiCoV, you can find the SARS-CoV2 data as we discussed in the introduction to databases.
 3. Let's download a very specific set of data that's geographically relevant (Uganda).
 4. For the data we are going to refine our search. Please refine the data to:
-- Sequences that were generated/posted from Jan 1 2025 to May 31 2025
+- Sequences that were *collected* from Jan 1 2025 to May 31 2025
 - Sequences that are found in Uganda
 - Complete sequences
 - Sequences with completed collection dates
