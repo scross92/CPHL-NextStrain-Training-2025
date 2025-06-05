@@ -171,12 +171,12 @@ We are now getting ready to move into the Nextstrain build steps.
 
 # Run some Nextstrain on the files you collected!
 
-We now have a list of 302 sequences and a metadata file for these sequences. It is time to move into the Nextstrain portion. We have walked through the steps of a Nextstrain build multiple times now (both remote learning and earlier in this in person training). We will dig in and really flesh out the steps of a customized config file for the pathogens of interest for CPHL. So to save time and energy, I have pulled together the necessary files and folders for running the Nexstrain build. Go ahead and copy these files by running this command:
+We now have a list of 302 sequences and a metadata file for these sequences. It is time to move into the Nextstrain portion. We have walked through the steps of a Nextstrain build multiple times now (both remote learning and earlier in this in person training). We will dig in and really flesh out the steps of a customized config file for the pathogens of interest for CPHL. So to save time and energy, I have pulled together the necessary files and folders for running the Nexstrain build. Go ahead and copy these files which can be found at this location:
 
 ```
-git clone XXXX
+CPHL-NextStrain-Training-2024/Exercises/CCHFV_nextstrain_build
 ```
-After it clones, it should now contain all the appropriate files and folders necessary to run a Nextstrain build. Go ahead and take a look at the pieces and remind yourself what the different files do:
+After it downloads, it should now contain all the appropriate files and folders necessary to run a Nextstrain build. Go ahead and take a look at the pieces and remind yourself what the different files do:
 
 - What is the purpose of the config.yaml file?
 - What is the key link between the sequences.fasta and the metadata.tsv files?
